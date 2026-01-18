@@ -1,6 +1,247 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+
+:root {
+    --molten-lava: #780000;
+    --brick-red: #c1121f;
+    --papaya-whip: #fdf0d5;
+    --deep-space-blue: #003049;
+    --steel-blue: #669bbc;
+
+    --spacing: 1em;
+    --border: 6px solid;
+}
+
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
 
-    background: #292929;
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--deep-space-blue);
+    color: var(--deep-space-blue);
+    padding: 1.5em 1em;
+}
+
+main {
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+article {
+    background-color: var(--papaya-whip);
+    border: var(--border) var(--steel-blue);
+    outline: 12px solid var(--steel-blue);
+    outline-offset: 0;
+}
+
+h1, h2, h3 {
+    font-family: 'Merriweather', serif;
+}
+
+.main-article-header {
+    background: linear-gradient(to left, var(--molten-lava), var(--brick-red));
+    padding: 1.5em;
+    text-align: center;
+}
+
+.main-article-header h1 {
+    color: var(--papaya-whip);
+    font-size: 2.5em;
+}
+
+.content-section-header,
+.bio-aside-header {
+    background-color: var(--brick-red);
+    color: var(--papaya-whip);
+    padding: var(--spacing);
+}
+
+.content-section-header h2 {
+    font-size: 1.8em;
+}
+
+.bio-aside-header {
+    font-size: 1.3em;
+}
+
+.special-fight-section-header {
+    background-color: var(--steel-blue);
+    padding: var(--spacing);
+}
+
+.special-fight-section-header h3 {
+    font-size: 1.3em;
+}
+
+.main-article-hr {
+    border: none;
+    height: 6px;
+    background-color: var(--steel-blue);
+}
+
+.hero-figure {
+    border: var(--border) var(--molten-lava);
+    margin: 1.5em;
+}
+
+.hero-image {
+    width: 100%;
+    display: block;
+}
+
+.hero-caption {
+    padding: 1.5em;
+}
+
+.hero-quote {
+    padding: 1.5em;
+}
+
+.hero-quote p {
+    font-family: 'Merriweather', serif;
+    font-size: 1.8em;
+    font-style: italic;
+    margin-bottom: 0.5em;
+}
+
+.hero-quote p::before {
+    content: '« ';
+    font-size: 1.2em;
+    color: var(--brick-red);
+}
+
+.hero-quote p::after {
+    content: ' »';
+    font-size: 1.2em;
+    color: var(--brick-red);
+}
+
+.hero-quote footer {
+    text-align: right;
+    padding: 0;
+}
+
+.hero-quote cite {
+    font-style: normal;
+}
+
+.content-section {
+    border: var(--border) var(--molten-lava);
+    margin: 1.5em;
+}
+
+.content-section-bio {
+    padding: var(--spacing);
+    line-height: 1.6;
+}
+
+.content-section-bio p {
+    margin-bottom: var(--spacing);
+}
+
+.bio-aside {
+    float: right;
+    width: 360px;
+    margin: 0 0 1em 1em;
+}
+
+.bio-aside-section {
+    border: var(--border) var(--molten-lava);
+    margin-bottom: var(--spacing);
+}
+
+.bio-aside-section ol,
+.bio-aside-section dl {
+    padding: var(--spacing);
+}
+
+.bio-aside-section ol {
+    padding-left: 1.5em;
+}
+
+.bio-aside-section li {
+    margin-bottom: 0.5em;
+    cursor: pointer;
+}
+
+.bio-aside-section li:hover {
+    color: var(--brick-red);
+    font-weight: bold;
+}
+
+.bio-aside-section dt {
+    font-weight: bold;
+    margin-top: 0.5em;
+}
+
+.bio-aside-section dd {
+    margin-left: 1em;
+    margin-bottom: 0.5em;
+}
+
+meter {
+    width: 100%;
+    height: 1.2em;
+}
+
+meter::-webkit-meter-optimum-value {
+    background: var(--steel-blue);
+}
+
+.achievements-list {
+    padding: 1em 1em 1em 3em;
+    list-style-type: disc;
+}
+
+.achievements-list li {
+    font-size: 1.125em;
+    line-height: 1.8;
+    margin-bottom: 0.5em;
+}
+
+abbr {
+    cursor: help;
+    text-decoration: underline dotted;
+}
+
+.special-fights-section {
+    border: var(--border) var(--steel-blue);
+    margin: var(--spacing);
+}
+
+.special-fights-section figure {
+    float: right;
+    width: 30%;
+    margin: var(--spacing);
+}
+
+.special-fights-section img {
+    width: 100%;
+    display: block;
+    border: var(--border) var(--steel-blue);
+}
+
+.chron-table {
+    width: 60%;
+    border-collapse: collapse;
+    margin: var(--spacing);
+}
+
+.chron-table th,
+.chron-table td {
+    border: var(--border) var(--steel-blue);
+    padding: 0.6em;
+    text-align: left;
+}
+
+.chron-table th {
+    background-color: var(--steel-blue);
+    color: var(--papaya-whip);
+}
+
+footer {
+    padding: 1.5em;
+    text-align: center;
 }
