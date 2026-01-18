@@ -118,12 +118,9 @@ h1, h2, h3 {
     color: var(--brick-red);
 }
 
-.hero-quote footer {
-    text-align: right;
-    padding: 0;
-}
-
 .hero-quote cite {
+    display: block;
+    text-align: right;
     font-style: normal;
 }
 
