@@ -8,6 +8,7 @@
     --steel-blue: #669bbc;
 
     --spacing: 1em;
+    --spacing-lg: 1.5em;
     --border: 6px solid;
 }
 
@@ -21,7 +22,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: var(--deep-space-blue);
     color: var(--deep-space-blue);
-    padding: 1.5em 1em;
+    padding: var(--spacing-lg) var(--spacing);
 }
 
 main {
@@ -29,152 +30,141 @@ main {
     margin: 0 auto;
 }
 
-article {
-    background-color: var(--papaya-whip);
-    border: var(--border) var(--steel-blue);
-    outline: 12px solid var(--steel-blue);
-    outline-offset: 0;
-}
-
 h1, h2, h3 {
     font-family: 'Merriweather', serif;
 }
 
-.main-article-header {
-    background: linear-gradient(to left, var(--molten-lava), var(--brick-red));
-    padding: 1.5em;
-    text-align: center;
+.card {
+    background-color: var(--papaya-whip);
+    border: var(--border) var(--steel-blue);
+    outline: 12px solid var(--steel-blue);
 }
 
-.main-article-header h1 {
+.card__title {
+    background: linear-gradient(to left, var(--molten-lava), var(--brick-red));
+    padding: var(--spacing-lg);
+    text-align: center;
     color: var(--papaya-whip);
     font-size: 2.5em;
 }
 
-.content-section-header,
-.bio-aside-header {
-    background-color: var(--brick-red);
-    color: var(--papaya-whip);
-    padding: var(--spacing);
+.card__footer {
+    padding: var(--spacing-lg);
+    text-align: center;
 }
 
-.content-section-header h2 {
-    font-size: 1.8em;
-}
-
-.bio-aside-header {
-    font-size: 1.3em;
-}
-
-.special-fight-section-header {
-    background-color: var(--steel-blue);
-    padding: var(--spacing);
-}
-
-.special-fight-section-header h3 {
-    font-size: 1.3em;
-}
-
-.main-article-hr {
+.divider {
     border: none;
     height: 6px;
     background-color: var(--steel-blue);
 }
 
-.hero-figure {
+.hero {
     border: var(--border) var(--molten-lava);
-    margin: 1.5em;
+    margin: var(--spacing-lg);
 }
 
-.hero-image {
+.hero__image {
     width: 100%;
     display: block;
 }
 
-.hero-caption {
-    padding: 1.5em;
+.hero__caption {
+    padding: var(--spacing-lg);
 }
 
-.hero-quote {
-    padding: 1.5em;
+.quote {
+    padding: var(--spacing-lg);
 }
 
-.hero-quote p {
+.quote__text {
     font-family: 'Merriweather', serif;
     font-size: 1.8em;
     font-style: italic;
     margin-bottom: 0.5em;
 }
 
-.hero-quote p::before {
+.quote__text::before {
     content: '« ';
     font-size: 1.2em;
     color: var(--brick-red);
 }
 
-.hero-quote p::after {
+.quote__text::after {
     content: ' »';
     font-size: 1.2em;
     color: var(--brick-red);
 }
 
-.hero-quote cite {
+.quote__author {
     display: block;
     text-align: right;
     font-style: normal;
 }
 
-.content-section {
+.section {
     border: var(--border) var(--molten-lava);
-    margin: 1.5em;
+    margin: var(--spacing-lg);
 }
 
-.content-section-bio {
+.section__title {
+    background-color: var(--brick-red);
+    color: var(--papaya-whip);
+    padding: var(--spacing);
+    font-size: 1.8em;
+}
+
+.section__content {
     padding: var(--spacing);
     line-height: 1.6;
 }
 
-.content-section-bio p {
+.section__content p {
     margin-bottom: var(--spacing);
 }
 
-.bio-aside {
+.sidebar {
     float: right;
     width: 360px;
-    margin: 0 0 1em 1em;
+    margin: var(--spacing);
 }
 
-.bio-aside-section {
+.info-block {
     border: var(--border) var(--molten-lava);
-    margin-bottom: var(--spacing);
 }
 
-.bio-aside-section ol,
-.bio-aside-section dl {
+.info-block__title {
+    background-color: var(--brick-red);
+    color: var(--papaya-whip);
+    padding: var(--spacing);
+    font-size: 1.3em;
+}
+
+.info-block__list {
     padding: var(--spacing);
 }
 
-.bio-aside-section ol {
-    padding-left: 1.5em;
+ol.info-block__list {
+    padding-left: var(--spacing-lg);
 }
 
-.bio-aside-section li {
+.info-block__list li {
     margin-bottom: 0.5em;
     cursor: pointer;
 }
 
-.bio-aside-section li:hover {
+.info-block__list li:hover {
     color: var(--brick-red);
     font-weight: bold;
 }
 
-.bio-aside-section dt {
+.info-block__list dt {
     font-weight: bold;
     margin-top: 0.5em;
 }
 
-.bio-aside-section dd {
-    margin-left: 1em;
+.info-block__list dd {
+    margin-left: var(--spacing);
     margin-bottom: 0.5em;
 }
 
@@ -187,12 +177,53 @@ meter::-webkit-meter-optimum-value {
     background: var(--steel-blue);
 }
 
-.achievements-list {
-    padding: 1em 1em 1em 3em;
+.fights {
+    border: var(--border) var(--steel-blue);
+    margin: var(--spacing);
+}
+
+.fights__title {
+    background-color: var(--steel-blue);
+    padding: var(--spacing);
+    font-size: 1.3em;
+}
+
+.fights__figure {
+    float: right;
+    width: 34%;
+    margin: var(--spacing);
+}
+
+.fights__figure img {
+    width: 100%;
+    display: block;
+    border: var(--border) var(--steel-blue);
+}
+
+.fights__table {
+    width: 60%;
+    border-collapse: collapse;
+    margin: var(--spacing);
+}
+
+.fights__table th,
+.fights__table td {
+    border: var(--border) var(--steel-blue);
+    padding: 0.6em;
+    text-align: left;
+}
+
+.fights__table th {
+    background-color: var(--steel-blue);
+    color: var(--papaya-whip);
+}
+
+.achievements {
+    padding: var(--spacing) var(--spacing) var(--spacing) 3em;
     list-style-type: disc;
 }
 
-.achievements-list li {
+.achievements li {
     font-size: 1.125em;
     line-height: 1.8;
     margin-bottom: 0.5em;
@@ -201,44 +232,4 @@ meter::-webkit-meter-optimum-value {
 abbr {
     cursor: help;
     text-decoration: underline dotted;
-}
-
-.special-fights-section {
-    border: var(--border) var(--steel-blue);
-    margin: var(--spacing);
-}
-
-.special-fights-section figure {
-    float: right;
-    width: 30%;
-    margin: var(--spacing);
-}
-
-.special-fights-section img {
-    width: 100%;
-    display: block;
-    border: var(--border) var(--steel-blue);
-}
-
-.chron-table {
-    width: 60%;
-    border-collapse: collapse;
-    margin: var(--spacing);
-}
-
-.chron-table th,
-.chron-table td {
-    border: var(--border) var(--steel-blue);
-    padding: 0.6em;
-    text-align: left;
-}
-
-.chron-table th {
-    background-color: var(--steel-blue);
-    color: var(--papaya-whip);
-}
-
-footer {
-    padding: 1.5em;
-    text-align: center;
 }
