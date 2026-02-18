@@ -1,6 +1,223 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+
+:root {
+    --molten-lava: #780000;
+    --brick-red: #c1121f;
+    --papaya-whip: #fdf0d5;
+    --deep-space-blue: #003049;
+    --steel-blue: #669bbc;
+
+    --spacing: 1em;
+    --spacing-large: 1.5em;
+    --border: 6px solid;
+}
+
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
 
-    background: #292929;
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--deep-space-blue);
+    padding: var(--spacing-large) var(--spacing);
+}
+
+main {
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    font-family: 'Merriweather', serif;
+}
+
+.card {
+    background-color: var(--papaya-whip);
+    border: 18px solid var(--steel-blue);
+}
+
+.card__title {
+    background: linear-gradient(to left, var(--molten-lava), var(--brick-red));
+    padding: var(--spacing-large);
+    text-align: center;
+    color: var(--papaya-whip);
+    font-size: 2.5em;
+}
+
+.card__footer {
+    padding: var(--spacing-large);
+    text-align: center;
+}
+
+.divider {
+    border: none;
+    height: 6px;
+    background-color: var(--steel-blue);
+}
+
+.hero {
+    border: var(--border) var(--molten-lava);
+    margin: var(--spacing-large);
+}
+
+.hero__image {
+    width: 100%;
+    display: block;
+}
+
+.hero__caption {
+    padding: var(--spacing-large);
+}
+
+.quote {
+    padding: var(--spacing-large);
+}
+
+.quote__text {
+    font-family: 'Merriweather', serif;
+    font-size: 1.8em;
+    font-style: italic;
+    margin-bottom: 0.5em;
+}
+
+.quote__text::before {
+    content: '« ';
+    font-size: 1.2em;
+    color: var(--brick-red);
+}
+
+.quote__text::after {
+    content: ' »';
+    font-size: 1.2em;
+    color: var(--brick-red);
+}
+
+.quote__author {
+    display: block;
+    text-align: right;
+    font-style: normal;
+}
+
+.section {
+    border: var(--border) var(--molten-lava);
+    margin: var(--spacing-large);
+}
+
+.section__title {
+    background-color: var(--brick-red);
+    color: var(--papaya-whip);
+    padding: var(--spacing);
+    font-size: 1.8em;
+}
+
+.section__content {
+    padding: var(--spacing);
+    line-height: 1.6;
+}
+
+.section__content p {
+    margin-bottom: var(--spacing);
+}
+
+.sidebar {
+    float: right;
+    width: 360px;
+    margin: var(--spacing);
+}
+
+.info-block {
+    border: var(--border) var(--molten-lava);
+}
+
+.info-block__title {
+    background-color: var(--brick-red);
+    color: var(--papaya-whip);
+    padding: var(--spacing);
+    font-size: 1.3em;
+}
+
+.info-block__list {
+    padding: var(--spacing);
+}
+
+ol.info-block__list {
+    padding-left: var(--spacing-large);
+}
+
+.info-block__list li:hover {
+    color: var(--brick-red);
+}
+
+.info-block__list dt {
+    font-weight: bold;
+    margin-top: 0.5em;
+}
+
+.info-block__list dd {
+    margin-left: var(--spacing);
+    margin-bottom: 0.5em;
+}
+
+meter {
+    width: 100%;
+    height: 1.2em;
+}
+
+.fights {
+    border: var(--border) var(--steel-blue);
+    margin: var(--spacing);
+}
+
+.fights__title {
+    background-color: var(--steel-blue);
+    padding: var(--spacing);
+    font-size: 1.3em;
+}
+
+.fights__figure {
+    float: right;
+    width: 34%;
+    margin: var(--spacing);
+}
+
+.fights__figure img {
+    width: 100%;
+    display: block;
+    border: var(--border) var(--steel-blue);
+}
+
+.fights__table {
+    width: 60%;
+    border-collapse: collapse;
+    margin: var(--spacing);
+}
+
+.fights__table th,
+.fights__table td {
+    border: var(--border) var(--steel-blue);
+    padding: 0.6em;
+    text-align: left;
+}
+
+.fights__table th {
+    background-color: var(--steel-blue);
+    color: var(--papaya-whip);
+}
+
+.achievements {
+    padding: var(--spacing) var(--spacing) var(--spacing) 3em;
+    list-style-type: disc;
+}
+
+.achievements li {
+    font-size: 1.125em;
+    line-height: 1.8;
+    margin-bottom: 0.5em;
+}
+
+abbr {
+    cursor: help;
+    text-decoration: underline dotted;
 }
